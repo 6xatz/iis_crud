@@ -1,0 +1,1 @@
+using System.Data.SqlClient;using System.Configuration;public class Db{    public static SqlConnection GetConnection()    {        string connStr = ConfigurationManager.ConnectionStrings["dbConn"].ConnectionString;        SqlConnection conn = new SqlConnection(connStr);        conn.Open();        return conn;    }}
